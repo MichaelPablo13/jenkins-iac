@@ -3,7 +3,7 @@ agent any
   stages {
     stage('Clone') {
       steps {
-        git url: 'seu-git-repo', branch: 'main'
+        git url: 'git@github.com:MichaelPablo13/vorx-network-shadow.git', branch: 'main'
       }
     }
 
