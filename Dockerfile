@@ -1,18 +1,24 @@
+FROM jenkins/jenkins
+
 USER root
 
 RUN apt-get update && apt-get install wget -y
 
-## INstall Terraform ##
+## Istall Terraform ##
 
 # Download terraform for linux
-RUN wget https://releases.hashicorp.com/terraform/1.4.2/terraform_1.4.2_linux_arm.zip
+RUN wget --quiet https://releases.hashicorp.com/terraform/1.4.2/terraform_1.4.2_linux_arm.zip
 
 # Unzip
 RUN unzip terraform_1.4.2_linux_arm.zip
 
 # Move to local bin
 RUN mv terraform /usr/local/bin/
-# Check that it's installed
+
+# Remove zip
+RUN rm terraform_1.4.2_linux_arm.zip
+
+# Check if it's installed
 RUN terraform --version
 
 USER jenkins
