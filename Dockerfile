@@ -16,7 +16,7 @@ RUN unzip terraform_1.4.2_linux_amd64.zip
 RUN mv terraform /usr/bin/
 
 # Remove zip
-RUN rm terraform_1.4.2_linux_arm.zip
+RUN rm terraform_1.4.2_linux_amd64.zip
 
 # Check if it's installed
 RUN terraform --version
