@@ -5,10 +5,10 @@ RUN apt-get update && apt-get install wget -y
 ## INstall Terraform ##
 
 # Download terraform for linux
-RUN wget https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip
+RUN wget https://releases.hashicorp.com/terraform/1.4.2/terraform_1.4.2_linux_arm.zip
 
 # Unzip
-RUN unzip terraform_0.11.11_linux_amd64.zip
+RUN unzip terraform_1.4.2_linux_arm.zip
 
 # Move to local bin
 RUN mv terraform /usr/local/bin/
